@@ -1,9 +1,11 @@
 {
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon src/index.ts",
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "ts-node": "npm run ts-node src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",
@@ -13,6 +15,5 @@
   },
   "dependencies": {
     "uuid": "^9.0.0"
-  },
-  "type": "module"
+  }
 }
