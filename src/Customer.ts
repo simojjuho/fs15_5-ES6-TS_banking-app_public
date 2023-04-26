@@ -18,13 +18,14 @@ export default class Customer{
     getTransactions(): Transaction[] { return this.transactions }
 
     getBalance(): number {
+        if (this.transactions.length === 0) 0
         return this.transactions.reduce((acc, curr) => {
             return acc + curr.amount
         }, 0)
     }
 
     addTransaction( amount: number ): boolean {
-        if (this.getBalance() - amount < 0) return false
+        if (this.getBalance() + amount < 0) return false
         const newTransaction: Transaction = {
             amount: amount,
             date: new Date()
