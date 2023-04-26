@@ -1,12 +1,10 @@
 # TypeScript Assignment
-by: Juho Simojoki
+by: Juho Simojoki (project template, i.e. empty files, and the assignment from Integrify Finland Full-Stack Academy, part of Microsoft stack program. 
 
-- Complete two challenges: banking application & fetching e-commerce data.
-- Check the scripts in `package.json` to run the suitable command for each challenge
+- To run the app, you will have to build it with npm run build. It will create the build directory and .js files.
+- npm run start will start the file.
 
-## Create a simple banking application
-
-Implement the following classes, interface, and codes (you can decide which file to put each type, but do not write all the types in `index.ts` or `bank.ts`). All the properties must be kept private, while you can make the methods as public
+## Simple banking application
 
 1. Class Bank
 
@@ -68,39 +66,8 @@ Implement the following classes, interface, and codes (you can decide which file
 
     - It has 2 properties, a number `amount`, and a Date called `date`. `date` refers to the time that transaction has been created.
 
-Run the following codes in `index.ts`and share your results and findings in the Slack channel
 
 ```
-const arizonaBank = new Bank("Arizona")
-const westBranch = new Branch("West Branch")
-const sunBranch = new Branch("Sun Branch")
-const customer1 = new Customer("John")
-const customer2 = new Customer("Anna")
-const customer3 = new Customer("John")
-
-arizonaBank.addBranch(westBranch)
-arizonaBank.addBranch(sunBranch)
-arizonaBank.addBranch(westBranch) 
-
-arizonaBank.findBranchByName("bank")
-arizonaBank.findBranchByName("sun")
-
-arizonaBank.addCustomer(westBranch, customer1)
-arizonaBank.addCustomer(westBranch, customer3)
-arizonaBank.addCustomer(sunBranch, customer1)
-arizonaBank.addCustomer(sunBranch, customer2)
-
-arizonaBank.addCustomerTransaction(westBranch, customer1.getId, 3000)
-arizonaBank.addCustomerTransaction(westBranch, customer1.getId, 2000)
-arizonaBank.addCustomerTransaction(westBranch, customer2.getId, 3000)
-
-customer1.addTransactions(-1000)
-console.log(customer1.getBalance())
-console.log(arizonaBank.listCustomers(westBranch, true))
-console.log(arizonaBank.listCustomers(sunBranch,true))
-```
-
-You can add more codes to check the functionality and secrity of your banking system
 
 ## Installation
 1. After clone the project from your forked repo, run `npm install`
