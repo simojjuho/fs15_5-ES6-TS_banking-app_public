@@ -7,6 +7,10 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@types/uuid": "^9.0.1",
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
